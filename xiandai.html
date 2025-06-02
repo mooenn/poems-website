@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>现代雅韵 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f0e6ff;
+            color: #5d4a8c;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.6;
+            overflow-x:hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin-top: 40px;
+            padding:0,20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding: 0 20px;
+
+        }
+        
+        h1 {
+            font-size: 3.8rem;
+            margin-bottom: 15px;
+            color: #5d4a8c;
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #7b68c7;
+            font-weight: 400;
+        }
+        
+        .poems-container {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 400px;
+        }
+        
+        .poem-card {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 20px;
+            padding: 25px;
+            width: 500px;
+            min-height: 280px;
+            display: flex;
+            flex-direction:column;
+            position: relative;
+            box-shadow: 0 6px 20px rgba(138, 114, 199, 0.15);
+            border: 1px solid rgba(200, 180, 240, 0.4);
+            transition:all 0.3 ease;
+            overflow:hidden;
+        }
+        
+        .poem-title {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: #6b5b95;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        .poem-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: #b8a9e0;
+        }
+        
+        .poem-author {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #8a7faa;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .poem-content {
+            flex-grow: 1;
+            font-size: 1.3rem;
+            line-height: 2.0;
+            text-align: center;
+            padding: 15px 0;
+            color: #5d4a8c;
+            font-weight: 500;
+        }
+        
+        .poem-content p {
+            margin: 8px 0;
+        }
+        
+        .dynasty {
+            text-align: center;
+            font-size: 1rem;
+            color: #a391d4;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        
+        .poem-icon {
+            font-size: 2.5rem;
+            color: #a391d4;
+            text-align: center;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #6b5b95;
+            font-size: 1rem;
+            margin-top: 20px;
+            border-top: 1px solid rgba(138, 114, 199, 0.2);
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .footer a {
+            color: #7b68c7;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .poems-container {
+                flex-direction: column;
+                align-items:center;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+                padding: 25PX 25px;
+            }
+            
+            .poem-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+        
+        .page-description {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 0 auto 4000px;
+            text-align: center;
+            max-width: 3000px;
+            border: 1px solid rgba(200, 180, 240, 0.4);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            color: #7b68c7;
+            font-weight: 00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>现代雅韵</h1>
+            <p class="subtitle">在宁静中品味经典诗篇</p>
+        </header>
+        <div class="poems-container">
+            <!-- 第一首诗 -->
+            <div class="poem-card">
+                <h2 class="poem-title">雨巷</h2>
+                <div class="poem-author">戴望舒</div>
+                <div class="poem-content">
+                    <p>撑着油纸伞，独自</p>
+                    <p>彷徨在悠长、悠长</p>
+                    <p>又寂寥的雨巷，</p>
+                    <p>我希望逢着</p>
+                    <p>一个丁香一样地</p>
+                    <p>结着愁怨的姑娘。</p>
+                    <p>她是有</p>
+                    <p>丁香一样的颜色，</p>
+                    <p>丁香一样的芬芳，</p>
+                    <p>丁香一样的忧愁，</p>
+                    <p>在雨中哀怨，</p>
+                    <p>哀怨又彷徨；</p>
+                </div>
+                <div class="dynasty">【现代】</div>
+            </div>
+            
+            <!-- 第二首诗 -->
+            <div class="poem-card">
+                <h2 class="poem-title">如果</h2>
+                <div class="poem-author">席慕容</div>
+                <div class="poem-content">
+                    <p>四季可以安排得极为黯淡</p>
+                    <p>如果太阳愿意</p>
+                    <p>人生可以安排得极为寂寞</p>
+                    <p>如果爱情愿意</p>
+                    <p>我可以永不再出现</p>
+                    <p>如果你愿意</p>
+                    <p>除了对你的思念</p>
+                    <p>亲爱的朋友 我一无长物</p>
+                    <p>然而 如果你愿意</p>
+                    <p>我将立即使思念枯萎 断落</p>
+
+                </div>
+                <div class="dynasty">【近代】</div>
+            </div>
+            
+            <!-- 第三首诗 -->
+            <div class="poem-card">
+                <h2 class="poem-title">热爱生命</h2>
+                <div class="poem-author">汪国真</div>
+                <div class="poem-content">
+                    <p>我不去想是否能够成功</p>
+                    <p>我不去想是否能够成功</p>
+                    <p>便只顾风雨兼程</p>
+                    <p>我不去想能否赢得爱情</p>
+                    <p>既然钟情于玫瑰</p>
+                    <p>就勇敢地吐露真诚</p>
+                    <p>我不去想身后会不会袭来寒风冷雨</p>
+                    <p>既然目标是地平线</p>
+                    <p>留给世界的只能是背影</p>
+                    <p>我不去想未来是平坦还是泥泞</p>
+                    <p>只要热爱生命</p>
+                    <p>一切，都在意料之中</p>
+                </div>
+                <div class="dynasty">【近代】</div>
+            </div>
+
+            <div class="poem-card">
+                <h2 class="poem-title">乡愁</h2>
+                <div class="poem-author">余光中</div>
+                <div class="poem-content">
+                    <p>小时候</p>
+                    <p>乡愁是一枚小小的邮票</p>
+                    <p>我在这头</p>
+                    <p>母亲在那头</p>
+                    <p>长大后</p>
+                    <p>乡愁是一张窄窄的船票</p>
+                    <p>我在这头</p>
+                    <p>新娘在那头</p>
+                    <p>后来啊</p>
+                    <p>乡愁是一方矮矮的坟墓</p>
+                    <p>我在外头</p>
+                    <p>母亲啊在里头</p>
+                </div>
+                <div class="dynasty">【近代】</div>
+            </div>
+
+
+
+            
+        </div>
+        
+        
+        <div class="footer">
+            <p>2025 诗歌集 - 多媒体作业</p>
+        </div>
+    </div>
+</body>
+</html>

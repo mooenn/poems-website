@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古诗雅韵 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f0e6ff;
+            color: #5d4a8c;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.6;
+            overflow-x:hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin-top: 40px;
+            padding:0,20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding: 0 20px;
+
+        }
+        
+        h1 {
+            font-size: 3.8rem;
+            margin-bottom: 15px;
+            color: #5d4a8c;
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #7b68c7;
+            font-weight: 400;
+        }
+        
+        .poems-container {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 400px;
+        }
+        
+        .poem-card {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 20px;
+            padding: 25px;
+            width: 250px;
+            min-height: 280px;
+            display: flex;
+            flex-direction:column;
+            position: relative;
+            box-shadow: 0 6px 20px rgba(138, 114, 199, 0.15);
+            border: 1px solid rgba(200, 180, 240, 0.4);
+            transition:all 0.3 ease;
+            overflow:hidden;
+        }
+        
+        .poem-title {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: #6b5b95;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        .poem-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: #b8a9e0;
+        }
+        
+        .poem-author {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #8a7faa;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .poem-content {
+            flex-grow: 1;
+            font-size: 1.3rem;
+            line-height: 2.0;
+            text-align: center;
+            padding: 15px 0;
+            color: #5d4a8c;
+            font-weight: 500;
+        }
+        
+        .poem-content p {
+            margin: 8px 0;
+        }
+        
+        .dynasty {
+            text-align: center;
+            font-size: 1rem;
+            color: #a391d4;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        
+        .poem-icon {
+            font-size: 2.5rem;
+            color: #a391d4;
+            text-align: center;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #6b5b95;
+            font-size: 1rem;
+            margin-top: 20px;
+            border-top: 1px solid rgba(138, 114, 199, 0.2);
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .footer a {
+            color: #7b68c7;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .poems-container {
+                flex-direction: column;
+                align-items:center;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+                padding: 25PX 25px;
+            }
+            
+            .poem-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+        
+        .page-description {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 0 auto 4000px;
+            text-align: center;
+            max-width: 3000px;
+            border: 1px solid rgba(200, 180, 240, 0.4);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            color: #7b68c7;
+            font-weight: 00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>古诗雅韵</h1>
+            <p class="subtitle">在宁静中品味经典诗篇</p>
+        </header>
+        <div class="poems-container">
+            <!-- 第一首诗 -->
+            <div class="poem-card">
+                <h2 class="poem-title">凉州词</h2>
+                <div class="poem-author">王翰</div>
+                <div class="poem-content">
+                    <p>葡萄美酒夜光杯，</p>
+                    <p>欲饮琵琶马上催。</p>
+                    <p>醉卧沙场君莫笑，</p>
+                    <p>古来征战几人回。</p>
+                </div>
+                <div class="dynasty">【唐】</div>
+            </div>
+            
+            <!-- 第二首诗 -->
+            <div class="poem-card">
+                <h2 class="poem-title">望江南·多少恨</h2>
+                <div class="poem-author">李煜</div>
+                <div class="poem-content">
+                    <p>多少恨，昨夜梦魂中。</p>
+                    <p>还似旧时游上苑，</p>
+                    <p>车如流水马如龙。</p>
+                    <p>花月正春风。</p>
+                </div>
+                <div class="dynasty">【五代】</div>
+            </div>
+            
+            <!-- 第三首诗 -->
+            <div class="poem-card">
+                <h2 class="poem-title">示儿</h2>
+                <div class="poem-author">陆游</div>
+                <div class="poem-content">
+                    <p>死去元知万事空，</p>
+                    <p>但悲不见九州同。</p>
+                    <p>王师北定中原日，</p>
+                    <p>家祭无忘告乃翁。</p>
+                </div>
+                <div class="dynasty">【宋】</div>
+            </div>
+
+            <div class="poem-card">
+                <h2 class="poem-title">碛中作</h2>
+                <div class="poem-author">岑参</div>
+                <div class="poem-content">
+                    <p>走马西来欲到天，</p>
+                    <p>辞家见月两回圆。</p>
+                    <p>今夜不知何处宿，</p>
+                    <p>平沙万里绝人烟。</p>
+                </div>
+                <div class="dynasty">【唐】</div>
+            </div>
+
+            <div class="poem-card">
+                <h2 class="poem-title">离思五首</h2>
+                <div class="poem-author">元稹 </div>
+                <div class="poem-content">
+                    <p>曾经沧海难为水，</p>
+                    <p>除却巫山不是云。</p>
+                    <p>取次花丛懒回顾，</p>
+                    <p>半缘修道半缘君。</p>
+                </div>
+                <div class="dynasty">【唐】</div>
+            </div>
+
+             <div class="poem-card">
+                <h2 class="poem-title">剑客</h2>
+                <div class="poem-author">贾岛</div>
+                <div class="poem-content">
+                    <p>十年磨一剑，</p>
+                    <p>霜刃未曾试。</p>
+                    <p>今日把示君，</p>
+                    <p>谁有不平事？</p>
+                </div>
+                <div class="dynasty">【唐】</div>
+            </div>
+
+             <div class="poem-card">
+                <h2 class="poem-title">南园十三首</h2>
+                <div class="poem-author">李贺</div>
+                <div class="poem-content">
+                    <p>男儿何不带吴钩，</p>
+                    <p>收取关山五十州。</p>
+                    <p>请君暂上凌烟阁，</p>
+                    <p>若个书生万户侯？</p>
+                </div>
+                <div class="dynasty">【唐】</div>
+            </div>
+
+             <div class="poem-card">
+                <h2 class="poem-title">春雪</h2>
+                <div class="poem-author">韩愈</div>
+                <div class="poem-content">
+                    <p>新年都未有芳华，</p>
+                    <p>辞家见月两回圆。</p>
+                    <p>白雪却嫌春色晚，</p>
+                    <p>故穿庭树作飞花。</p>
+                </div>
+                <div class="dynasty">【唐】</div>
+            </div>
+
+        </div>
+        
+        
+        <div class="footer">
+            <p>2025 诗歌集 - 多媒体作业</p>
+        </div>
+    </div>
+</body>
+</html>

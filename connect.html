@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>联系我们</title>
+  <link rel="stylesheet" href="style.css">
+  <style>body {
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  background-color: #f0f4ff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #4a6fff;
+}
+
+p {
+  line-height: 1.6;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #4a6fff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3a54cc;
+}
+
+.info {
+  margin-top: 30px;
+  font-size: 0.95em;
+  color: #666;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>联系我们</h1>
+    <p>有任何问题或建议，请随时通过以下方式联系我们。</p>
+
+    <form>
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">邮箱：</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">留言内容：</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">发送</button>
+    </form>
+  </div>
+</body>
+</html>

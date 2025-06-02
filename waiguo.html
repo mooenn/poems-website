@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欧美雅韵 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f0e6ff;
+            color: #5d4a8c;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.6;
+            overflow-x:hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin-top: 40px;
+            padding:0,20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding: 0 20px;
+
+        }
+        
+        h1 {
+            font-size: 3.8rem;
+            margin-bottom: 15px;
+            color: #5d4a8c;
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #7b68c7;
+            font-weight: 400;
+        }
+        
+        .poems-container {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 400px;
+        }
+        
+        .poem-card {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 20px;
+            padding: 25px;
+            width: 500px;
+            min-height: 280px;
+            display: flex;
+            flex-direction:column;
+            position: relative;
+            box-shadow: 0 6px 20px rgba(138, 114, 199, 0.15);
+            border: 1px solid rgba(200, 180, 240, 0.4);
+            transition:all 0.3 ease;
+            overflow:hidden;
+        }
+        
+        .poem-title {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: #6b5b95;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        .poem-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: #b8a9e0;
+        }
+        
+        .poem-author {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #8a7faa;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .poem-content {
+            flex-grow: 1;
+            font-size: 1.3rem;
+            line-height: 2.0;
+            text-align: center;
+            padding: 15px 0;
+            color: #5d4a8c;
+            font-weight: 500;
+        }
+        
+        .poem-content p {
+            margin: 8px 0;
+        }
+        
+        .dynasty {
+            text-align: center;
+            font-size: 1rem;
+            color: #a391d4;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        
+        .poem-icon {
+            font-size: 2.5rem;
+            color: #a391d4;
+            text-align: center;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #6b5b95;
+            font-size: 1rem;
+            margin-top: 20px;
+            border-top: 1px solid rgba(138, 114, 199, 0.2);
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .footer a {
+            color: #7b68c7;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .poems-container {
+                flex-direction: column;
+                align-items:center;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+                padding: 25PX 25px;
+            }
+            
+            .poem-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+        
+        .page-description {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 0 auto 4000px;
+            text-align: center;
+            max-width: 3000px;
+            border: 1px solid rgba(200, 180, 240, 0.4);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            color: #7b68c7;
+            font-weight: 00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>欧美雅韵</h1>
+            <p class="subtitle">Savor classic poetry in tranquility.</p>
+        </header>
+        <div class="poems-container">
+            <!-- 第一首诗 -->
+            <div class="poem-card">
+                <h2 class="poem-title">Kubla Khan </h2>
+                <div class="poem-author">Samuel Taylor Coleridge </div>
+                <div class="poem-content">
+                    <p>In Xanadu did Kubla Khan</p>
+                    <p>忽必列汗在上都曾经</p>
+                    <p>A stately pleasure-dome decree:</p>
+                    <p>下令造一座堂皇的安乐殿堂:</p>
+                    <p>Where Alph, the sacrecl river, ran</p>
+                    <p>这地方有圣河亚佛流奔，</p>
+                    <p>Through caverns measureless to man</p>
+                    <p>穿过深不可测的洞门，</p>
+                    <p>Down to a sunless sea.</p>
+                    <p>So twice five miles of fertile ground</p>
+                    <p>有方圆五英里肥沃的土壤，</p>
+                    <p>With walls and towers were girdled round:</p>
+                    <p>四周给围上楼塔和城墙:</p>
+                    <p>And there were gardens bright with sinuous rills,</p>
+                    <p>那里有花园，蜿蜒的溪河在其间闪耀，</p>
+                    <p>Where blossomed many an incense-bearing tree;</p>
+                    <p>园里树枝上鲜花盛开，一片芬芳;</p>
+                    <p>And here were forests ancient as the hills,</p>
+                    <p>这里有森林，跟山峦同样古老，</p>
+                    <p>Enfolding sunny spots of greenery.</p>
+                    <p>围住了洒满阳光的一块块青草草场。</p>
+                </div>
+                <div class="dynasty">【foreign】</div>
+            </div>
+            
+            <!-- 第二首诗 -->
+            <div class="poem-card">
+                <h2 class="poem-title">Ode to the west wind</h2>
+                <div class="poem-author">Shelley</div>
+                <div class="poem-content">
+                    <p>O wild West Wind, thou breath of Autumn's being,</p>
+                    <p>剽悍的西风啊,你是暮秋的呼吸,</p>
+                    <p>Thou, from whose unseen presence the leaves dead</p>
+                    <p>因你无形的存在,枯叶四处逃窜,</p>
+                    <p>Are driven, like ghosts from an enchanter fleeing,</p>
+                    <p>如同魔鬼见到了巫师,纷纷躲避;</p>
+                    <p>Yellow, and black, and pale, and hectic red,</p>
+                    <p>那些枯叶,有黑有白,有红有黄,</p>
+                    <p>Pestilence-stricken multitudes: O thou,</p>
+                    <p>像遭受了瘟疫的群体,哦,你呀,</p>
+                    <p>Who chariotest to their dark wintry bed</p>
+                    <p>西风,你让种籽展开翱翔的翅膀,</p>
+                    <p>The winged seeds, where they lie cold and low,</p>
+                    <p>飞落到黑暗的冬床,冰冷地躺下,</p>
+                    <p>Each like a corpse within its grave, until</p>
+                    <p>像一具具尸体深葬于坟墓,直到</p>
+                    <p>Thine azure sister of the Spring shall blow</p>
+                    <p>你那蔚蓝色的阳春姐妹凯旋归家,</p>
+                    <p>Her clarion o\'er the dreaming earth, and fill</p>
+                    <p>向睡梦中的大地吹响了她的号角,</p>
+                     <p>Driving sweet buds like flocks to feed in air</p>
+                    <p>催促蓓蕾,有如驱使吃草的群羊,</p>
+                    <p>With living hues and odours plain and hill:</p>
+                    <p>让漫山遍野注满生命的芳香色调;</p>
+                    <p>Wild Spirit, which art moving everywhere;</p>
+                    <p>剽悍的精灵,你的身影遍及四方,</p>
+                    <p>Destroyer and preserver; hear, oh hear!</p>
+                    <p>哦,听吧,你既在毁坏,又在保藏!</p>
+                </div>
+                <div class="dynasty">【近代】</div>
+            </div>
+            
+           
+        </div>
+        
+        
+        <div class="footer">
+            <p>2025 诗歌集 - 多媒体作业</p>
+        </div>
+    </div>
+</body>
+</html>
